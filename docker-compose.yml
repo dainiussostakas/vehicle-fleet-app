@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  nginx:
+    container_name: vlantana-app-nginx
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    ports:
+      - '18081:80'
+    volumes:
+      - ./src/dist:/app/
+
+  node:
+    container_name: vlantana-app-node
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+    volumes:
+      - ./src:/app/
+    ports:
+      - "18082:5173"
