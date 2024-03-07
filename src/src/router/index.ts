@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory  } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 import AppLayout from '@/layout/AppLayout.vue';
 
@@ -10,11 +9,6 @@ const router = createRouter({
       path: '/',
       component: AppLayout,
       children: [
-        // {
-        //   path: '/',
-        //   name: 'dashboard',
-        //   component: () => import('@/views/Dashboard.vue')
-        // },
         {
           path: '/',
           name: 'vehicles',

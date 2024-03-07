@@ -4,9 +4,9 @@ import Kitsu from "./KitsuClient";
 export class BaseService {
     protected apiClient: Kitsu;
 
-    constructor(protected url: string, protected model: string, options = {}) {
+    constructor(protected model: string, options = {}) {
         this.apiClient = new Kitsu({
-            baseURL: this.url,
+            baseURL: 'http://51.158.187.119:18080/api/v1/',
             camelCaseTypes: false,
             ...options
         });

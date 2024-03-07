@@ -11,8 +11,7 @@ const vehicleBrandItems = defineModel('vehicleBrandItems', {default: []});
 const fieldTitle = defineModel('fieldTitle', {default: null});
 const fieldVehicleBrand = defineModel('fieldVehicleBrand', {default: null});
 
-let url = 'http://localhost:18080/api/v1/';
-const vehicleModelService = new VehicleModelService(url);
+const vehicleModelService = new VehicleModelService();
 
 function reset() {
   fieldTitle.value = null;

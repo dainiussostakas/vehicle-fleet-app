@@ -14,8 +14,7 @@ const fieldVehicleModel = defineModel('fieldVehicleModel', {default: null});
 const fieldFuelTankCapacity = defineModel('fieldFuelTankCapacity', {default: null});
 const fieldAverageFuelConsumption = defineModel('fieldAverageFuelConsumption', {default: null});
 
-let url = 'http://localhost:18080/api/v1/';
-const vehicleService = new VehicleService(url);
+const vehicleService = new VehicleService();
 
 function reset() {
   fieldRegistrationPlate.value = null;

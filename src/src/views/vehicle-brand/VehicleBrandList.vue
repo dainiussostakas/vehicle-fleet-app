@@ -80,8 +80,7 @@ import {VehicleBrandService} from "@/service/VehicleBrandService";
 import VehicleBrandAddDialog from "@/views/vehicle-brand/VehicleBrandAddDialog.vue";
 import JsonApiRequestQueryParams from "@/models/JsonApiRequestQueryParams.ts";
 
-let url = 'http://localhost:18080/api/v1/';
-const vehicleBrandService = new VehicleBrandService(url);
+const vehicleBrandService = new VehicleBrandService();
 
 let params = {
   'include': 'vehicleBrand',

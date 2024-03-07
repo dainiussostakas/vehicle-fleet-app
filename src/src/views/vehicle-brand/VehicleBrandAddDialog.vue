@@ -9,8 +9,7 @@ const header = defineModel('header', {default: "New vehicle brand"});
 
 const fieldTitle = defineModel('fieldTitle', {default: null});
 
-let url = 'http://localhost:18080/api/v1/';
-const vehicleBrandService = new VehicleBrandService(url);
+const vehicleBrandService = new VehicleBrandService();
 
 function reset() {
   fieldTitle.value = null;
