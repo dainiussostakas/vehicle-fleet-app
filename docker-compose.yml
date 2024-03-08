@@ -3,7 +3,7 @@ version: '3'
 services:
 
   nginx:
-    container_name: vlantana-app-nginx
+    container_name: vehicle-fleet-app-nginx
     build:
       context: .
       dockerfile: docker/nginx/Dockerfile
@@ -13,7 +13,7 @@ services:
       - ./src/dist:/app/
 
   node:
-    container_name: vlantana-app-node
+    container_name: vehicle-fleet-app-node
     build:
       context: .
       dockerfile: docker/node/Dockerfile
